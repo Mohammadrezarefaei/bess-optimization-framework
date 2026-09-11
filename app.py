@@ -151,7 +151,7 @@ col3.metric("Net Financial Yield", f"€{net_profit:,.2f}", delta="Optimal Yield
 
 st.markdown("---")
 
-# --- Interactive Plotly Charts (Dark Theme with blue styled legend box) ---
+# --- Interactive Plotly Charts (Dark Theme with purple background & blue border legend) ---
 fig = make_subplots(
     rows=2, cols=1, shared_xaxes=True,
     vertical_spacing=0.08,
@@ -179,10 +179,10 @@ fig.update_layout(
         y=0.98,
         xanchor="left",
         x=0.01,
-        bgcolor="rgba(14, 30, 60, 0.9)",      # Solid blue dark background
-        bordercolor="#00ffff",                  # Neon blue border
+        bgcolor="rgba(60, 20, 80, 0.9)",      # Solid purple background
+        bordercolor="#00ffff",                  # Neon blue border lines
         borderwidth=1.5,
-        font=dict(color="#ffffff", size=11)     # High-contrast clean white text
+        font=dict(color="#ffffff", size=11)     # Clean white text
     )
 )
 
