@@ -14,13 +14,15 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Custom CSS for Sleek Dark Theme UI
+# Custom CSS for Sleek Dark Theme UI & Readable Legend/Boxes
 st.markdown("""
     <style>
     .main { background-color: #0e1117; color: #ffffff; }
     .sidebar .sidebar-content { background-color: #16192b; }
     h1, h2, h3 { color: #00ffcc !important; }
     .metric-card { background-color: #1e1e2f; padding: 15px; border-radius: 10px; border: 1px solid #262730; }
+    /* Fix plotly legend text readability */
+    .legendtext { color: #ffffff !important; }
     </style>
 """, unsafe_allow_html=True)
 
@@ -151,7 +153,7 @@ col3.metric("Net Financial Yield", f"€{net_profit:,.2f}", delta="Optimal Yield
 
 st.markdown("---")
 
-# --- Interactive Plotly Charts (Dark Theme with fixed top margin) ---
+# --- Interactive Plotly Charts (Dark Theme with solid styled legend box) ---
 fig = make_subplots(
     rows=2, cols=1, shared_xaxes=True,
     vertical_spacing=0.08,
@@ -172,8 +174,17 @@ fig.update_layout(
     paper_bgcolor="#0e1117",
     plot_bgcolor="#0e1117",
     height=750,
-    margin=dict(l=20, r=20, t=80, b=20),  # Fixed top margin to prevent toolbar/title overlap
-    legend=dict(orientation="h", yanchor="bottom", y=1.05, xanchor="right", x=1)
+    margin=dict(l=20, r=20, t=80, b=20),
+    legend=dict(
+        orientation="h",
+        yanchor="bottom",
+        y=1.06,
+        xanchor="right",
+        x=1,
+        bgcolor="#16192b",       # Solid dark background for legend box
+        bordercolor="#262730",     # Sleek subtle border
+        borderwidth=1
+    )
 )
 
 st.plotly_chart(fig, use_container_width=True)
