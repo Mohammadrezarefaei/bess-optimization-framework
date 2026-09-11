@@ -4,3 +4,5 @@ xgboost>=1.7.0
 entsoe-py>=0.5.0
 matplotlib>=3.7.0
 pytest>=7.0.0
+streamlit>=1.20.0
+plotly>=5.0.0
