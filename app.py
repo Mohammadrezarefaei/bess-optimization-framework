@@ -151,7 +151,7 @@ col3.metric("Net Financial Yield", f"€{net_profit:,.2f}", delta="Optimal Yield
 
 st.markdown("---")
 
-# --- Interactive Plotly Charts (Dark Theme) ---
+# --- Interactive Plotly Charts (Dark Theme with fixed top margin) ---
 fig = make_subplots(
     rows=2, cols=1, shared_xaxes=True,
     vertical_spacing=0.08,
@@ -171,9 +171,9 @@ fig.update_layout(
     template="plotly_dark",
     paper_bgcolor="#0e1117",
     plot_bgcolor="#0e1117",
-    height=700,
-    margin=dict(l=20, r=20, t=40, b=20),
-    legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1)
+    height=750,
+    margin=dict(l=20, r=20, t=80, b=20),  # Fixed top margin to prevent toolbar/title overlap
+    legend=dict(orientation="h", yanchor="bottom", y=1.05, xanchor="right", x=1)
 )
 
 st.plotly_chart(fig, use_container_width=True)
