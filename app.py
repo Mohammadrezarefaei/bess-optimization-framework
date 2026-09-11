@@ -21,8 +21,7 @@ st.markdown("""
     .sidebar .sidebar-content { background-color: #16192b; }
     h1, h2, h3 { color: #00ffcc !important; }
     .metric-card { background-color: #1e1e2f; padding: 15px; border-radius: 10px; border: 1px solid #262730; }
-    /* Fix plotly legend text readability */
-    .legendtext { color: #ffffff !important; }
+    .legendtext { color: #111111 !important; }
     </style>
 """, unsafe_allow_html=True)
 
@@ -153,7 +152,7 @@ col3.metric("Net Financial Yield", f"€{net_profit:,.2f}", delta="Optimal Yield
 
 st.markdown("---")
 
-# --- Interactive Plotly Charts (Dark Theme with solid styled legend box) ---
+# --- Interactive Plotly Charts (Dark Theme with light legend box & dark text) ---
 fig = make_subplots(
     rows=2, cols=1, shared_xaxes=True,
     vertical_spacing=0.08,
@@ -174,16 +173,17 @@ fig.update_layout(
     paper_bgcolor="#0e1117",
     plot_bgcolor="#0e1117",
     height=750,
-    margin=dict(l=20, r=20, t=80, b=20),
+    margin=dict(l=20, r=20, t=90, b=20),
     legend=dict(
         orientation="h",
         yanchor="bottom",
-        y=1.06,
+        y=1.08,
         xanchor="right",
         x=1,
-        bgcolor="#16192b",       # Solid dark background for legend box
-        bordercolor="#262730",     # Sleek subtle border
-        borderwidth=1
+        bgcolor="#e0e0e0",       # Light background for clear visibility
+        bordercolor="#cccccc",
+        borderwidth=1,
+        font=dict(color="#111111", size=12)  # Dark, high-contrast text color
     )
 )
 
