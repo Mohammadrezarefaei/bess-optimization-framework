@@ -1,5 +1,8 @@
 # BESS Optimization Framework
 
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://bess-optimization-framework-ft5ocmtpxcqoojjudtel6p.streamlit.app/)
+[![Pipeline Test](https://github.com/Mohammadrezarefaei/bess-optimization-framework/actions/workflows/pytest.yml/badge.svg)](https://github.com/Mohammadrezarefaei/bess-optimization-framework/actions)
+
 Open-source, lender-grade quantitative dispatch modeling tool designed for European electricity markets (EPEX / ENTSO-E). This framework delivers transparent day-ahead asset optimization, blending real-time price forecasting, degradation tracking, and automated revenue modeling for Battery Energy Storage Systems (BESS).
 
 ## Core Capabilities
@@ -23,11 +26,6 @@ Open-source, lender-grade quantitative dispatch modeling tool designed for Europ
 * **Core Libraries**: Pandas, NumPy, Scikit-Learn, Streamlit, Matplotlib
 * **Data Storage**: SQLite (local/persistent state management)
 * **Market Data**: EPEX Spot / SMARD open-access feeds
-
-## Status & Testing
-
-[![Pipeline Test](https://github.com/Mohammadrezarefaei/bess-optimization-framework/actions/workflows/pytest.yml/badge.svg)](https://github.com/Mohammadrezarefaei/bess-optimization-framework/actions)
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://bess-optimization-framework-ft5ocmtpxcqoojjudtel6p.streamlit.app/)
 
 ## Getting Started
 
