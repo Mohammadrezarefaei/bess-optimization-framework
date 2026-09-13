@@ -1,4 +1,3 @@
-```markdown
 # BESS Optimization Framework
 
 Open-source, lender-grade quantitative dispatch modeling tool designed for European electricity markets (EPEX / ENTSO-E). This framework delivers transparent day-ahead asset optimization, blending real-time price forecasting, degradation tracking, and automated revenue modeling for Battery Energy Storage Systems (BESS).
@@ -13,10 +12,10 @@ Open-source, lender-grade quantitative dispatch modeling tool designed for Europ
 ## Visual Pipeline & Analytics
 
 ### Market Generation & Thermal Dispatch
-![BESS Market Analysis](bess_dark_analysis%20(1).png)
+![BESS Market Analysis](bess_dark_analysiss.png)
 
 ### Dynamic Dispatch & Arbitrage Simulation
-![BESS Dispatch Animation](bess_dispatch_animation%20(1).gif)
+![BESS Dispatch Animation](bess_dispatch_animationn.gif)
 
 ## Technical Architecture
 
@@ -30,19 +29,3 @@ Open-source, lender-grade quantitative dispatch modeling tool designed for Europ
 1. Clone the repository and install dependencies:
    ```bash
    pip install -r requirements.txt
-
-```
-
-2. Run the interactive web application:
-```bash
-streamlit run app.py
-
-```
-
-
-
-Live Demo: [Streamlit Cloud Deployment](https://bess-optimization-framework-ft5ocmtpxcqoojjudtel6p.streamlit.app/)
-
-```
-
-```
